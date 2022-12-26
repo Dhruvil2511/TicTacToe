@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg2"
+    tools:context=".MainActivity">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tictactoeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:contentDescription="@string/title_of_app"
+        android:fontFamily="@font/cherry_cream_soda"
+        android:text="@string/tic_tac_toe"
+        android:textColor="#FFFFFF"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/tictactoeImage"
+        android:layout_width="183dp"
+        android:layout_height="185dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/tictactoe2"
+        android:contentDescription="@string/image_of_tic_tac_toe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        tools:ignore="ImageContrastCheck" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/player1Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="13"
+        android:maxLength="10"
+        android:maxLines="1"
+        android:inputType="text"
+        android:hint="@string/enter_name_of_player_1"
+        android:minHeight="48dp"
+        android:textColorHint="#78909C"
+        app:layout_constraintEnd_toEndOf="@+id/tictactoeImage"
+        app:layout_constraintHorizontal_bias="0.213"
+        app:layout_constraintStart_toStartOf="@+id/tictactoeImage"
+        app:layout_constraintTop_toBottomOf="@+id/tictactoeImage" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/player2Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="13"
+        android:hint="@string/enter_name_of_player_2"
+        android:minHeight="48dp"
+        android:textColorHint="#78909C"
+        android:maxLength="10"
+        android:maxLines="1"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/player1Name"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/player1Name"
+        app:layout_constraintTop_toBottomOf="@+id/player1Name" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/playButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:backgroundTint="#0026FF"
+        android:contentDescription="@string/go_to_next_activity"
+        android:ems="7"
+        android:text="@string/play"
+        android:textColor="#FFFFFF"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/player2Name"
+        app:layout_constraintHorizontal_bias="0.331"
+        app:layout_constraintStart_toStartOf="@+id/player2Name"
+        app:layout_constraintTop_toBottomOf="@+id/player2Name"
+        app:layout_constraintVertical_bias="0.436"
+        tools:ignore="TextContrastCheck" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/crossImage"
+        android:layout_width="51dp"
+        android:layout_height="40dp"
+        android:background="@drawable/transparentcross"
+        android:contentDescription="@string/cross_image"
+        app:layout_constraintBottom_toBottomOf="@+id/player1Name"
+        app:layout_constraintEnd_toStartOf="@+id/player1Name"
+        app:layout_constraintHorizontal_bias="0.194"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/player1Name"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/circleImage"
+        android:layout_width="51dp"
+        android:layout_height="40dp"
+        android:background="@drawable/redcircle"
+        android:backgroundTint="#0B9BFB"
+        android:contentDescription="@string/circle_image"
+        app:layout_constraintBottom_toBottomOf="@+id/player2Name"
+        app:layout_constraintEnd_toStartOf="@+id/player2Name"
+        app:layout_constraintHorizontal_bias="0.193"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/player2Name"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="ImageContrastCheck" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="179dp" />
+
+    <TextView
+        android:id="@+id/madeBy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dhruvil"
+        android:textColor="#645A5A"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/tictactoeTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tictactoeTitle" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

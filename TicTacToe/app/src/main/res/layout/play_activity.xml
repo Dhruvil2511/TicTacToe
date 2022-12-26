@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/playScreen"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg2"
+    android:layout_height="match_parent"
+    android:splitMotionEvents="false">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="54dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3">
+
+        <TextView
+            android:id="@+id/gamePlayer1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="28dp"
+            android:gravity="center"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp"
+            android:text="@string/p1name"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/c1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/_0"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/draw"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:gravity="center"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp"
+            android:text="@string/draw"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/c2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/_0"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/gamePlayer2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:gravity="end"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp"
+            android:text="@string/p2name"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/c3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="28dp"
+            android:gravity="center"
+            android:text="@string/_0"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/score"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.52" />
+
+    <ImageView
+        android:id="@+id/emptyBoard"
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:layout_marginTop="50dp"
+        android:contentDescription="@string/playboard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@drawable/empty_board" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button00"
+        android:layout_width="139dp"
+        android:layout_height="119dp"
+        android:layout_marginStart="4dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:onClick="onClickButton"
+        android:text=""
+        android:contentDescription="@string/button1"
+        android:textSize="105sp"
+        app:layout_constraintEnd_toEndOf="@+id/button10"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/emptyBoard"
+        tools:ignore="UsingOnClickInXml" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button01"
+        android:layout_width="108dp"
+        android:layout_height="119dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:onClick="onClickButton"
+        android:text=""
+        android:textColor="@color/blue"
+        android:textSize="105sp"
+        android:contentDescription="@string/button2"
+        app:layout_constraintBottom_toBottomOf="@+id/button00"
+        app:layout_constraintEnd_toStartOf="@+id/button02"
+        app:layout_constraintStart_toEndOf="@+id/button00"
+        app:layout_constraintTop_toTopOf="@+id/button00"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="UsingOnClickInXml" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button02"
+        android:layout_width="139dp"
+        android:layout_height="119dp"
+        android:layout_marginEnd="4dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:onClick="onClickButton"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="105sp"
+        android:contentDescription="@string/button3"
+        app:layout_constraintBottom_toBottomOf="@+id/button01"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button01"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="UsingOnClickInXml" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button10"
+        android:layout_width="139dp"
+        android:layout_height="119dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:onClick="onClickButton"
+        android:text=""
+        android:contentDescription="@string/button4"
+        android:textColor="@color/black"
+        android:textSize="105sp"
+        app:layout_constraintEnd_toEndOf="@+id/button20"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button00"
+        tools:ignore="UsingOnClickInXml" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button11"
+        android:layout_width="108dp"
+        android:layout_height="119dp"
+        android:layout_marginTop="12dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:onClick="onClickButton"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="105sp"
+        android:contentDescription="@string/button5"
+        app:layout_constraintBottom_toBottomOf="@+id/button10"
+        app:layout_constraintEnd_toStartOf="@+id/button12"
+        app:layout_constraintStart_toEndOf="@+id/button10"
+        app:layout_constraintTop_toBottomOf="@+id/button01"
+        tools:ignore="UsingOnClickInXml" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button12"
+        android:layout_width="139dp"
+        android:layout_height="119dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="4dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:onClick="onClickButton"
+        android:text=""
+        android:contentDescription="@string/button6"
+        android:textColor="@color/black"
+        android:textSize="105sp"
+        app:layout_constraintBottom_toBottomOf="@+id/button11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button02"
+        tools:ignore="UsingOnClickInXml" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button20"
+        android:layout_width="139dp"
+        android:layout_height="119dp"
+        android:layout_marginStart="4dp"
+        android:contentDescription="@string/button7"
+        android:background="?android:attr/selectableItemBackground"
+        android:onClick="onClickButton"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="105sp"
+        app:layout_constraintBottom_toBottomOf="@+id/emptyBoard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button10"
+        tools:ignore="UsingOnClickInXml" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button21"
+        android:layout_width="108dp"
+        android:layout_height="119dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:onClick="onClickButton"
+        android:text=""
+        android:textColor="@color/black"
+        android:contentDescription="@string/button8"
+        android:textSize="105sp"
+        app:layout_constraintBottom_toBottomOf="@+id/button20"
+        app:layout_constraintEnd_toStartOf="@+id/button22"
+        app:layout_constraintStart_toEndOf="@+id/button20"
+        app:layout_constraintTop_toBottomOf="@+id/button11"
+        tools:ignore="UsingOnClickInXml" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button22"
+        android:layout_width="139dp"
+        android:layout_height="119dp"
+        android:layout_marginEnd="4dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:onClick="onClickButton"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="105sp"
+        android:contentDescription="@string/button9"
+        app:layout_constraintBottom_toBottomOf="@+id/emptyBoard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button12"
+        tools:ignore="UsingOnClickInXml" />
+
+    <TextView
+        android:id="@+id/turnText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/s_turn"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emptyBoard" />
+
+    <ImageView
+        android:id="@+id/refresh"
+        android:layout_width="45dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/newgame"
+        android:contentDescription="@string/new_game_score"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/resetScore"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/refreshText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/turnText"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_default="wrap" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
